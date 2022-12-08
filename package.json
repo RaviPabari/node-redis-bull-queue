@@ -1,0 +1,19 @@
+{
+  "name": "redis-test",
+  "version": "1.0.0",
+  "description": "setting redis on local for bull",
+  "main": "helper.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Ravi Pabari",
+  "license": "ISC",
+  "dependencies": {
+    "bull": "^4.10.2",
+    "dotenv": "^16.0.3",
+    "redis": "^4.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
