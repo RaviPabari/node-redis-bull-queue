@@ -4,9 +4,6 @@
 // const functions  = require() // uncomment and import the real functions here
 /** This functions are the bull queue's job functions -> job.action*/
 const functions = {} // comment this in case you want to execute real functions
-/** predefined queue params for each platform/channel */
-const predefined_queues = require('./predefined-queue-params')
-
 
 /**
  * Third party libraries
@@ -54,7 +51,8 @@ const add_job_to_queue = async (queue_name, job_data = {}, options = {}, process
         const new_job = await queue.add(process_name, job_data, options)
         return new_job
     } catch (err) {
-
+        err.scope = 'add_job_to_queue'
+        throw err
     }
 }
 
